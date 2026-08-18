@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 | 至美科技 AMICORD CORP. - 賦能全天候自主電能・引領台灣淨零路徑</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            slate: '#0F172A',
+                            dark: '#1E293B',
+                            light: '#F8FAFC',
+                            blue: '#0284C7',
+                            sky: '#38BDF8',
+                            teal: '#0D9488',
+                            mint: '#34D399',
+                            border: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+        }
+        .tech-grid-bg {
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .tesla-glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .tesla-glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+        }
+        .text-gradient-sky {
+            background: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-mint {
+            background: linear-gradient(135deg, #38BDF8 0%, #34D399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pulse-teal {
+            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(52, 211, 153, 0); }
+            100% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+        }
+        /* Gradient Transition Effect Dark to Light */
+        .dark-to-light-gradient {
+            background: linear-gradient(to bottom, #000000 0%, #0F172A 40%, #1E293B 70%, #F8FAFC 100%);
+        }
+        .light-card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex flex-col min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-blue-700 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
+                        至美科技 <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800 tracking-wider">AMICORD</span>
+                    </span>
+                    <span class="text-[9px] text-slate-400 font-medium tracking-widest uppercase">Energy Storage Solution</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">首頁</a>
+                <a href="products.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">產品介紹</a>
+                <a href="about.html" class="text-sm font-semibold text-sky-400 border-b-2 border-sky-400 py-1">關於我們</a>
+            </nav>
+
+            <!-- Secondary CTA: LINE Consult -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://lin.ee/Q3Oiu67" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-md shadow-emerald-600/30 hover:scale-105 active:scale-95">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.844 2.572-6.002z"/>
+                    </svg>
+                    <span>LINE 專人諮詢 (@850roijd)</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-900">首頁</a>
+            <a href="products.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-900">產品介紹</a>
+            <a href="about.html" class="block px-3 py-2 rounded-lg text-base font-semibold text-sky-400 bg-sky-950/60 border border-sky-900">關於我們</a>
+            <div class="pt-2">
+                <a href="https://lin.ee/Q3Oiu67" target="_blank" rel="noopener noreferrer" class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-emerald-600">
+                    LINE 專人諮詢 (@850roijd)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section (Tesla Powerwall Aesthetic) -->
+    <section class="relative pt-20 pb-20 overflow-hidden tech-grid-bg bg-black">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-slate-950/90 to-black pointer-events-none"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-sky-500/30 text-sky-400 text-xs font-semibold tracking-widest uppercase mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-teal"></span>
+                AMICORD CORP. | ENERGY STORAGE & NET ZERO
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight max-w-5xl mx-auto">
+                賦能全天候自主電能<br class="hidden sm:inline"/>
+                <span class="text-gradient-sky">引領台灣淨零路徑</span>
+            </h1>
+
+            <p class="mt-8 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+                「見樹也見林，讓淨零路徑更清晰。」<strong class="text-white font-semibold">至美科技（AMICORD CORP.）</strong>整合世界級儲能硬體設備、台電電力交易專業與 ISO 國際碳查證實力，為台灣家庭與企業打造最堅實的電能韌性。
+            </p>
+
+            <!-- Dual CTAs -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://lin.ee/Q3Oiu67" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 rounded-full text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-600/30 hover:scale-105">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.844 2.572-6.002z"/>
+                    </svg>
+                    <span>加入 LINE 專人諮詢 (@850roijd)</span>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-slate-300 bg-slate-900/90 border border-slate-700 hover:bg-slate-800 hover:text-white transition-all">
+                    <span>預約用電規劃評估</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. WEF 全球首座儲能燈塔工廠製造背書 (Dark) -->
+    <section class="py-20 bg-slate-950 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="tesla-glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">WEF GLOBAL LIGHTHOUSE NETWORK</span>
+                            <span class="text-xs font-bold text-amber-400 bg-amber-950/80 px-3 py-1 rounded-full border border-amber-800">世界經濟論壇認證</span>
+                        </div>
+                        
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                            全球首座儲能燈塔工廠製造<br/>
+                            <span class="text-slate-400 text-2xl sm:text-3xl font-normal">極致自動化 × 綠色低碳製造</span>
+                        </h2>
+
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            HeroEE 全系列電芯生產源自瑞士日內瓦世界經濟論壇（WEF）評選之全球儲能行業第一座燈塔工廠（Global Lighthouse Network），運用 AI 視覺全檢、全面自動化與極致品質管控，賦予儲能產品最高的安全與穩定標準。
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono text-emerald-400">
+                            <span class="bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-800/60">✓ 全流程 AI 智慧品質檢測</span>
+                            <span class="bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-800/60">✓ 100 GWh 累計出貨驗證</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                        <div class="p-6 rounded-2xl bg-black/70 border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <span class="block text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight">+30%</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1 block">生產效率提升</span>
+                                <span class="text-[11px] text-slate-500">極致管理優化與自動化產線</span>
+                            </div>
+                            <div class="text-3xl">🚀</div>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-black/70 border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <span class="block text-4xl sm:text-5xl font-black text-sky-400 tracking-tight">-25%</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1 block">製造成本降低</span>
+                                <span class="text-[11px] text-slate-500">技術驅動降本，重塑高 CP 值</span>
+                            </div>
+                            <div class="text-3xl">📉</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 海辰 HeroEE 台灣官方授權維修中心 (Dark) -->
+    <section class="py-20 bg-black border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 px-3.5 py-1.5 rounded-full border border-emerald-800">
+                    Taiwan Local Service Center
+                </span>
+                <h2 class="mt-4 text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+                    海辰 HeroEE 台灣官方授權維修中心
+                </h2>
+                <p class="mt-4 text-slate-400 text-sm sm:text-base">
+                    至美科技在地深耕，拒絕產品過保即無人修護的困境。我們建構在地標準化維修測試產線，為台灣用戶提供全方位的專業保障。
+                </p>
+            </div>
+
+            <!-- 3 Service Promises Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="tesla-glass-card p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-black text-xl border border-emerald-500/20">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-white">原廠受訓認證工程師團隊</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        工程團隊親赴海辰深圳研習中心受訓，獲頒原廠專屬檢修認證證照，具備第一線精準排錯與維修實力。
+                    </p>
+                </div>
+
+                <div class="tesla-glass-card p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-black text-xl border border-sky-500/20">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-white">在台備齊充足零組件庫存</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        原廠電芯與核心逆變模組在地備貨，維修不需跨海耗時寄送，當週迅速完工，大幅縮短修護等待期。
+                    </p>
+                </div>
+
+                <div class="tesla-glass-card p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-black text-xl border border-teal-500/20">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-white">全方位 SOH 檢測與韌體升級</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        提供電池健康度（SOH）診斷、BMS 電芯自動平衡校正與 Cloud EMS 雲端韌體線上更新維護。
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. 三大震撼關鍵數據指標 (Big Impact Numbers Bar) (Dark) -->
+    <section class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-400 bg-sky-950/80 px-3.5 py-1.5 rounded-full border border-sky-800">
+                    Performance Benchmark
+                </span>
+                <h2 class="mt-3 text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    業界頂尖效能與安全數據
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="tesla-glass-card p-8 rounded-3xl text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-28 h-28 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <span class="block text-5xl sm:text-6xl font-black text-sky-400 tracking-tight mb-3">11,000 次</span>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wider mb-2">HiTHIUM 314Ah 工業電芯</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">同級產品 2~5 倍超長循環壽命，大幅降低生命週期度電成本 (LCOE)。</p>
+                </div>
+
+                <div class="tesla-glass-card p-8 rounded-3xl text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-28 h-28 bg-teal-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <span class="block text-5xl sm:text-6xl font-black text-teal-400 tracking-tight mb-3">100%</span>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wider mb-2">DoD 放電深度 & CNS 62619</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">完整放電效能，通過台灣國家級安全檢驗（8 大極端測試無明火、不爆炸）。</p>
+                </div>
+
+                <div class="tesla-glass-card p-8 rounded-3xl text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-28 h-28 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <span class="block text-5xl sm:text-6xl font-black text-emerald-400 tracking-tight mb-3">0 秒級</span>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wider mb-2">電力備援無縫切換</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">跳電瞬切不斷電，保護精密儀器、生鮮冷鏈與生命照護設備正常運作。</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Gradient Transition Section (Dark to Light/White Background) -->
+    <div class="dark-to-light-gradient h-32 w-full"></div>
+
+    <!-- ========================================================================================= -->
+    <!-- LIGHT / WHITE BACKGROUND SECTIONS BELOW (從這裡以下漸層變回白色/亮色背景) -->
+    <!-- ========================================================================================= -->
+
+    <main class="bg-[#F8FAFC] text-slate-900">
+
+        <!-- 6. 硬核專業實力矩陣 (Light Theme) -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-200">
+                    Core Competencies & Qualifications
+                </span>
+                <h2 class="mt-4 text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+                    硬核專業實力矩陣
+                </h2>
+                <p class="mt-4 text-slate-600 text-sm sm:text-base">
+                    至美科技不只是儲能設備供應商，更具備台電電力交易平台營運、國家級淨零碳規劃與 ISO 國際碳查證專業技術團隊。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Qualification 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 light-card-shadow flex flex-col justify-between hover:border-sky-400 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">台電電力交易平台<br/>專業代操作員</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            團隊具備台電電力交易代操作員專業資格，專精日前輔助服務（dReg、E-dReg）與表後儲能案場系統規劃。
+                        </p>
+                    </div>
+                    <span class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-sky-600 font-bold">TAIPOWER TRADING</span>
+                </div>
+
+                <!-- Qualification 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 light-card-shadow flex flex-col justify-between hover:border-emerald-400 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">經濟部 iPAS<br/>淨零碳規劃管理師</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            通過國家級淨零碳規劃管理能力鑑定，精準協助企業擬定碳中和路徑與 RE100 能源轉型戰略。
+                        </p>
+                    </div>
+                    <span class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-emerald-600 font-bold">MOEA iPAS CERTIFIED</span>
+                </div>
+
+                <!-- Qualification 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 light-card-shadow flex flex-col justify-between hover:border-teal-400 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">國際能源量測驗證<br/>(CMVP / PMVA)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            具備國際 Certified Measurement & Verification Professional 認證，科學驗證節能與儲能節費數據。
+                        </p>
+                    </div>
+                    <span class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-teal-600 font-bold">CMVP / PMVA CERTIFIED</span>
+                </div>
+
+                <!-- Qualification 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 light-card-shadow flex flex-col justify-between hover:border-sky-400 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">ISO 國際碳資產<br/>查證輔導團隊</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            熟稔 ISO 14064-1 溫室氣體盤查、ISO 14067 產品碳足跡與 ISO 14068-1 碳中和驗證技術規範。
+                        </p>
+                    </div>
+                    <span class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-sky-600 font-bold">ISO 14064 / 14067 / 14068</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. 備援防護 ＆ 能源自給 (Energy Independence Flow - Light Theme) -->
+        <section class="py-20 border-t border-slate-200 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                
+                <!-- Block 1: Backup Protection -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase tracking-wider">
+                            Backup Protection
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            極致安全・全天候備援防護
+                        </h2>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            遭遇颱風侵襲或電網無預警中斷時，HeroEE 儲能系統自動無縫切換供電。無需柴油發電機的噪音與廢氣，靜音且無污染地持續供應家庭冰箱、空調、照明與醫療照護儀器運轉，讓居家與商業營運在風雨中依然燈火通明。
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 font-bold">✓</div>
+                                <span>無縫切換不斷電，守護醫療器材與生鮮冷鏈</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 font-bold">✓</div>
+                                <span>真 220V/110V 寬幅高功率輸出，重負載運作不降載</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backup Graphic (Light Mode Glass Card) -->
+                    <div class="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between h-96 shadow-xl">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-slate-400">GRID STATUS: <span class="text-red-400 font-bold">OFFLINE (停電)</span></span>
+                            <span class="text-xs font-mono text-emerald-400 font-bold bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-800">HEROEE SYSTEM: ACTIVE</span>
+                        </div>
+
+                        <!-- Visual Power Switch Diagram -->
+                        <div class="my-auto grid grid-cols-3 gap-4 text-center">
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                                <div class="text-2xl mb-1">⚡</div>
+                                <span class="block text-xs font-bold text-slate-400">外部市電</span>
+                                <span class="text-[10px] text-red-400">供電中斷</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-sky-950/90 border border-sky-500/60 shadow-lg shadow-sky-500/10">
+                                <div class="text-2xl mb-1">🔋</div>
+                                <span class="block text-xs font-bold text-sky-400">HeroEE 儲能</span>
+                                <span class="text-[10px] text-emerald-400">0 秒自動接管</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                                <div class="text-2xl mb-1">🏡</div>
+                                <span class="block text-xs font-bold text-white">重要負載</span>
+                                <span class="text-[10px] text-emerald-400">100% 正常運作</span>
+                            </div>
+                        </div>
+
+                        <div class="text-right text-[11px] text-slate-400 font-mono">
+                            AUTOMATIC UNINTERRUPTIBLE POWER SUPPLY (UPS)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 2: Energy Independence -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Energy Flow Graphic -->
+                    <div class="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between h-96 shadow-xl order-2 lg:order-1">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-slate-400">SMART ENERGY DISPATCH</span>
+                            <span class="text-xs font-mono text-sky-400 font-bold bg-sky-950/80 px-2.5 py-1 rounded-full border border-sky-800">CLOUD EMS ONLINE</span>
+                        </div>
+
+                        <!-- Flow Diagram -->
+                        <div class="space-y-4 my-auto">
+                            <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700 flex items-center justify-between text-xs">
+                                <span class="flex items-center gap-2 font-bold text-amber-400">☀️ 白天太陽能 / 離峰電</span>
+                                <span class="text-slate-300">充入 HeroEE 儲能系統 🔋</span>
+                            </div>
+                            <div class="flex justify-center text-sky-400">↓ 智慧雲端調度釋放電力 ↓</div>
+                            <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700 flex items-center justify-between text-xs">
+                                <span class="flex items-center gap-2 font-bold text-sky-400">⚡ 尖峰高電價時段</span>
+                                <span class="text-emerald-400">自動供電、大幅節省電費 💰</span>
+                            </div>
+                        </div>
+
+                        <!-- Flow Badge -->
+                        <div class="p-2.5 rounded-xl bg-slate-800 text-center text-[11px] font-mono text-teal-300 border border-teal-800/60">
+                            太陽能 ☀️ ➔ HeroEE 儲能 🔋 ➔ 住宅負載 🏡 ➔ 電網調度 ⚡
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-wider">
+                            Energy Independence
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            能源自給・全方位能源掌控
+                        </h2>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            結合太陽能光電與智慧儲能，白天儲存潔淨陽光，離峰時段自動吸納低價電力，於尖峰高電價時段智慧釋放。不僅大幅降低對傳統電網的依賴，更實質減少營運與家庭電費支出，邁向電力自給自足。
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 font-bold">✓</div>
+                                <span>Cloud EMS 自動學習用電曲線，實現時間電價削峰填谷</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 font-bold">✓</div>
+                                <span>智慧氣象連動，暴風雨前夕自動充滿防續供電</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 8. 四步驟標準化服務流程 (Light Theme) -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    四步驟標準化服務流程
+                </h2>
+                <p class="mt-3 text-slate-600 text-sm sm:text-base">
+                    從需求評估到原廠在地售後保固，至美科技為您提供一站式無憂能源服務。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 light-card-shadow relative">
+                    <span class="text-4xl font-black text-sky-500/20 mb-3 block">01</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">需求評估與諮詢</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        分析您的停電備援需求、負載電器功率或住宅/企業之時間電價用電曲線。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 light-card-shadow relative">
+                    <span class="text-4xl font-black text-teal-500/20 mb-3 block">02</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">專業配置規劃</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        精準配對 HeroEE 5 大系列儲能型號，並規劃 Cloud EMS 最佳化節費策略。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 light-card-shadow relative">
+                    <span class="text-4xl font-black text-emerald-500/20 mb-3 block">03</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">標準安裝與檢測</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        合格電工工程師團隊現場施工、對接配電箱、安全斷路測試與系統校正。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 light-card-shadow relative">
+                    <span class="text-4xl font-black text-sky-500/20 mb-3 block">04</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">原廠在地保固</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        享台灣原廠在地維修中心保固，提供 24/7 雲端監控與專業售後支援。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 9. Contact & Inquiry Hub (#contact - Light Theme) -->
+        <section id="contact" class="py-20 bg-slate-100 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1.5 rounded-full border border-emerald-200">
+                        Contact & Inquiry
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+                        預約專業用電規劃與評估
+                    </h2>
+                    <p class="mt-4 text-slate-600 text-sm sm:text-base">
+                        無論是居家不斷電備援、企業節費調度或綠能資產規劃，至美科技專家團隊隨時為您服務。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Official Company Info & LINE Card -->
+                    <div class="lg:col-span-5 space-y-8">
+                        
+                        <!-- LINE Card -->
+                        <div class="p-8 rounded-3xl bg-emerald-900 text-white border border-emerald-700 shadow-xl relative overflow-hidden">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-emerald-500/40">
+                                    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                        <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.844 2.572-6.002z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">官方 LINE 即時諮詢</h3>
+                                    <p class="text-xs text-emerald-300 font-mono">ID: @850roijd</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-200 leading-relaxed mb-6">
+                                加入官方 LINE 帳號，專人即時線上解答產品規格、報價、安裝評估與售後服務問題。
+                            </p>
+                            <a href="https://lin.ee/Q3Oiu67" target="_blank" rel="noopener noreferrer" class="w-full inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-600/30">
+                                <span>立即加入 LINE 專人諮詢</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Company Credentials Card -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200 light-card-shadow space-y-4 text-xs text-slate-700">
+                            <h4 class="text-base font-bold text-slate-900 pb-3 border-b border-slate-200">至美科技股份有限公司</h4>
+                            
+                            <div class="flex items-center gap-3">
+                                <span class="text-slate-500 w-16">統一編號</span>
+                                <span class="text-slate-900 font-mono font-bold">23459859</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3">
+                                <span class="text-slate-500 w-16">客服電話</span>
+                                <a href="tel:062991916" class="text-sky-600 hover:underline font-bold">06-299-1916</a>
+                                <span class="text-[10px] text-slate-500">(週一至五 09:00 - 18:00)</span>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <span class="text-slate-500 w-16 flex-shrink-0">公司地址</span>
+                                <span class="text-slate-900">708015 台南市安平區建平十七街157之1號1F</span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <span class="text-slate-500 w-16">客服信箱</span>
+                                <a href="mailto:info@amicord.com.tw" class="text-sky-600 hover:underline">info@amicord.com.tw</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Online Inquiry Form -->
+                    <div class="lg:col-span-7">
+                        <form id="inquiry-form" class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 light-card-shadow space-y-6">
+                            
+                            <h3 class="text-2xl font-bold text-slate-900 mb-1">線上提交用電評估申請</h3>
+                            <p class="text-xs text-slate-500 mb-6">請填寫您的基本資訊與需求，我們的顧問將於 24 小時內與您聯繫。</p>
+
+                            <!-- Product Selection -->
+                            <div>
+                                <label for="product-select" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">感興趣的產品型號</label>
+                                <select id="product-select" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                                    <option value="all">不限 / 請專家推薦適合型號</option>
+                                    <option value="LIGHT1">HeroEE LIGHT 1 (1kWh / 9.3kg 輕量)</option>
+                                    <option value="HeroEE2">HeroEE 2 (2kWh / 1000W 熱銷首選)</option>
+                                    <option value="MaxPower8">HeroEE MaxPower 8 AIO (8kWh 旗艦一體機)</option>
+                                    <option value="HeroEE16">HeroEE 16 (16kWh 定置型模組)</option>
+                                    <option value="Legend112S">HeroEE Legend 112S (64-240kWh 高壓系統)</option>
+                                </select>
+                            </div>
+
+                            <!-- Inquiry Category -->
+                            <div>
+                                <label for="inquiry-type" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">主要諮詢項目</label>
+                                <select id="inquiry-type" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                                    <option value="backup">家用停電備援與不斷電</option>
+                                    <option value="outdoor">露營戶外與行動辦公</option>
+                                    <option value="commercial">餐飲生鮮冷鏈應急 / 居家長照醫療</option>
+                                    <option value="cni">社區大樓公設 / 工商廠務高壓儲能</option>
+                                    <option value="trading">台電電力交易代操作 / ISO 碳盤查諮詢</option>
+                                </select>
+                            </div>
+
+                            <!-- User Info Fields -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="user-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">姓名 / 聯絡人 *</label>
+                                    <input type="text" id="user-name" required placeholder="請輸入姓名" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="user-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">聯絡電話 *</label>
+                                    <input type="tel" id="user-phone" required placeholder="請輸入手機或電話" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="user-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">電子信箱</label>
+                                <input type="email" id="user-email" placeholder="example@domain.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="user-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">需求描述 / 備註</label>
+                                <textarea id="user-message" rows="3" placeholder="例如：透天三樓需要冰箱與空調不斷電備援，欲了解報價..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl font-bold text-sm text-white bg-slate-900 hover:bg-sky-600 transition-all shadow-lg">
+                                提交用電評估申請
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Minimalist Footer -->
+    <footer class="bg-black text-slate-500 text-xs border-t border-slate-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-white font-bold text-base">
+                        <span>至美科技 AMICORD CORP.</span>
+                    </div>
+                    <p class="text-slate-400">
+                        統一編號：23459859 ｜ 電話：06-2991916 ｜ 地址：台南市安平區建平十七街157之1號1F
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-300">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        <span>台灣 CNS 62619 安規認證驗證</span>
+                    </div>
+                    <a href="https://lin.ee/Q3Oiu67" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-bold">
+                        LINE 專人諮詢 (@850roijd)
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-600">
+                <p>© 2026 至美科技股份有限公司 AMICORD CORP. 版權所有。</p>
+                <div class="flex gap-6">
+                    <a href="index.html" class="hover:text-slate-400 transition-colors">首頁</a>
+                    <a href="products.html" class="hover:text-slate-400 transition-colors">產品介紹</a>
+                    <a href="about.html" class="hover:text-slate-400 transition-colors">關於我們</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // 2. Pre-select Product in Form if URL query has ?product=XYZ
+            const urlParams = new URLSearchParams(window.location.search);
+            const productParam = urlParams.get('product');
+            const productSelect = document.getElementById('product-select');
+
+            if (productParam && productSelect) {
+                const options = Array.from(productSelect.options);
+                const matchedOption = options.find(opt => opt.value.toLowerCase() === productParam.toLowerCase());
+                if (matchedOption) {
+                    productSelect.value = matchedOption.value;
+                }
+            }
+
+            // 3. Form Submission Handling
+            const inquiryForm = document.getElementById('inquiry-form');
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('user-name').value;
+                    const phone = document.getElementById('user-phone').value;
+
+                    if (!name || !phone) {
+                        return;
+                    }
+
+                    // Create stylish confirmation banner
+                    const successBanner = document.createElement('div');
+                    successBanner.className = 'p-6 rounded-2xl bg-emerald-50 border border-emerald-300 text-slate-900 text-center space-y-3 mt-4 animate-fade-in shadow-md';
+                    successBanner.innerHTML = `
+                        <div class="text-3xl">✅</div>
+                        <h4 class="text-base font-bold text-emerald-700">感謝您的提交，${name} 先生/女士！</h4>
+                        <p class="text-xs text-slate-600">我們已收到您的用電規劃評估申請，至美科技專業顧問將於 24 小時內以電話 (${phone}) 與您聯繫。</p>
+                        <p class="text-[11px] text-slate-500">您亦可直接加入官方 LINE (<strong class="text-emerald-600">@850roijd</strong>) 獲得即時諮詢！</p>
+                    `;
+
+                    inquiryForm.replaceWith(successBanner);
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
